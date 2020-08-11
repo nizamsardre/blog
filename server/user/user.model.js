@@ -11,6 +11,13 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  roles: {
+    type: [{
+      type: String,
+      enum: ['blogger', 'commenter']
+    }],
+    default: ['blogger']
+  },
   mobileNumber: {
     type: String,
     required: true,
