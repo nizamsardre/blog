@@ -17,6 +17,14 @@ var CommentSchema = new Schema({
     type: Schema.ObjectId,
     ref: 'Blog'
   },
+  commentClose: {
+    type: Boolean,
+    default: false
+  },
+  spam: {
+    type: Boolean,
+    default: false
+  },
   text: {
     type: String,
     default: '',
